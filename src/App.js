@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+import StyledButton from "./components/StyledButton";
+import StyledButtonWithProps from "./components/StyledButtonWithProps";
+import StyledButton2 from "./components/StyledButton2";
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const MyApp = () => {
+   return(
+     <>
+      <div className="wrap">
+
+        <h1>Styled button</h1>      
+        <StyledButton className="button">I am a styled button! 🥑</StyledButton>
+
+        <h1>Components with props</h1>
+        <StyledButtonWithProps className="button" bg="#ffc3c3" color="#b6201e">Button 🥥</StyledButtonWithProps>
+        <StyledButtonWithProps className="button" bg="#ffdaca" color="#d85d16">Button 🥝</StyledButtonWithProps>
+        <StyledButtonWithProps className="button" bg="#fff4c7" color="#bb9922">Button 🍍</StyledButtonWithProps>
+
+        <h1>Conditional component</h1>
+        <StyledButton2 className="button" buttonType="primary">I am a Primary Button! ✌</StyledButton2>
+        <StyledButton2 className="button">I am a different kind of button! 🤟</StyledButton2>
+      </div>
+     </>
+   )
 }
 
-export default App;
+export default MyApp;
